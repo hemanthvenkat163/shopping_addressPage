@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="/stylesheets/style1.css">
+</head>
+
+<body>
+  <div class="main">
+      <h3>Saved Address :</h3>
+
+
+
+    <% for(i=0; i<listItems.length;i++){ %>
+    <div class="item">
+      <div class="itemChild1">
+        <p><%=listItems[i].addresses[0].name%></p>
+        <p><%=listItems[i].addresses[0].mobile%></p>
+      </div>
+      <div class="itemChild2">
+        <% if(listItems[i].addresses[0].address!=""){ %>
+        <p><%=listItems[i].addresses[0].address%>,</p>
+        <% } %>
+
+        <% if(listItems[i].addresses[0].landmark !=""){ %>
+        <p><%=listItems[i].addresses[0].landmark%>,</p>
+        <% } %>
+        <% if(listItems[i].addresses[0].locality!=""){ %>
+        <p><%=listItems[i].addresses[0].locality%>,</p>
+        <% } %>
+
+        <p><%=listItems[i].addresses[0].city%>,</p>
+        <p><%=listItems[i].addresses[0].state%>-</p>
+        <p><%=listItems[i].addresses[0].pincode%></p>
+      </div>
+    </div>
+    <hr>
+    <% }; %>
+    <a href="/add_address"><button type="button" class="link_btn" name="link_btn">Add Address</button></a>
+  </div>
+
+</body>
+
+</html>

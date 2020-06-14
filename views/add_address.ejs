@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="address_heading">
+      <h3>Add a New Address: </h3>
+    </div>
+    <form class="address_form" action="/add_address" method="post">
+
+      <div class="name_and_mobile">
+        <input type="text" name="name" value="" placeholder="Name">
+        <input type="text" name="mobile" value="" placeholder="Mobile">
+      </div>
+      <div class="pincode_and_locality">
+        <input type="text" name="pincode" class="pincode" value="" placeholder="Pincode" required>
+        <input type="text" name="locality" value="" placeholder="Locality">
+      </div>
+      <div class="address">
+        <!-- <input type="text" name="pincode" value="" placeholder="Address"> -->
+        <textarea name="address" rows="8" cols="80" placeholder="Address" required></textarea>
+      </div>
+      <div class="city_and_state">
+        <input type="text" name="city" class="city" value="" placeholder="City" required>
+        <input type="text" name="state" class="state" value="" placeholder="State" required>
+      </div>
+      <div class="landmark_and_alternatephone">
+        <input type="text" name="landmark" value="" placeholder="landmark">
+        <input type="text" name="alternatephone" value="" placeholder="Alternate Phone">
+      </div>
+      <div class="buttons">
+        <button type="submit" name="save_btn">Save</button>
+        <a href="/view_address"><button type="button" class="link_btn" name="link_btn">View Address</button></a>
+      </div>
+    </form>
+  </div>
+  <script src="/javascripts/add_address.js" charset="utf-8"></script>
+</body>
+
+</html>
